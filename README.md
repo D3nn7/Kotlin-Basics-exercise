@@ -1,6 +1,10 @@
 # Logistik Management System
 > Ein Projekt um seine Kotlin Basic fähigkeiten zu festigen.
 
+<p align="center">
+    <img src="./.github/truck-kotlin-basics-flux1.png">
+</p>
+
 Entwickle ein Logistik-Management-System als Kotlin-Konsolenanwendung.
 
 ## Projektziele:
