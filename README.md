@@ -22,7 +22,7 @@ Entwickle ein Logistik-Management-System als Kotlin-Konsolenanwendung.
   - Verwaltung von Fahrerstatus
   - Führerscheinverwaltung mit Gültigkeitsprüfung
   - Urlaubsplanung
-- ### Auftragsverwaltung
+- ### Auftragsverwaltung (Optional)
   - Verwaltung von Lieferaufträgen
   - Zuordnung zu Fahrzeugen unter Berücksichtigung der Kapazität
   - Warenverwaltung mit Gewicht und Menge 
