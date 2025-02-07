@@ -9,7 +9,7 @@ import service.DeliveryService
 import trailer.TrailerType
 import ui.ConsoleUI
 import vehicle.FuelType
-import vehicle.LicenseType
+import driver.LicenseType
 import vehicle.Truck
 import vehicle.VehicleStatus
 import java.time.LocalDate

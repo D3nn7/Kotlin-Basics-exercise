@@ -1,6 +1,5 @@
 package driver
 
-import vehicle.LicenseType
 import java.time.LocalDate
 
 interface IDriver {

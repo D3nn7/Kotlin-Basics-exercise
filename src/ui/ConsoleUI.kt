@@ -8,7 +8,7 @@ import driver.DriverStatus
 import order.OrderStatus
 import service.DeliveryService
 import vehicle.FuelType
-import vehicle.LicenseType
+import driver.LicenseType
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

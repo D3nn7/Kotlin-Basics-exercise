@@ -3,7 +3,7 @@ package repository.inMemory
 import driver.Driver
 import driver.DriverStatus
 import repository.IDriverRepository
-import vehicle.LicenseType
+import driver.LicenseType
 
 class InMemoryDriverRepository : IDriverRepository {
     private val drivers = mutableMapOf<String, Driver>()
