@@ -1,22 +1,24 @@
 package vehicle
 
-import maintenance.IMaintenanceSchedule
-import java.time.LocalDate
-import java.time.temporal.ChronoUnit
+import java.util.*
 
-abstract class AbstractVehicle : IVehicle, IMaintenanceSchedule {
-    override var currentFuelLevel: Double = 100.0
-    override var lastMaintenanceDate: LocalDate = LocalDate.now()
+abstract class AbstractVehicle: IVehicle {
 
-    override fun needsMaintenance(): Boolean {
-        return isMaintenanceOverdue() || currentFuelLevel < 20.0
+    private val maintenance: VehicleMaintenance by lazy {
+
+        VehicleMaintenance(this, maintenanceScheduleInKilometers)
     }
 
-    override fun isAvailableForDelivery(): Boolean {
-        return status == VehicleStatus.AVAILABLE && !needsMaintenance()
+    override val id: UUID
+        get() = UUID.randomUUID()
+
+    override fun checkIfNextMaintenanceIsRequired(): Boolean {
+
+        return maintenance.isMaintenanceNeeded()
     }
 
-    override fun isMaintenanceOverdue(): Boolean {
-        return ChronoUnit.DAYS.between(lastMaintenanceDate, LocalDate.now()) > 30
+    override fun displayMaintenanceInformation() {
+
+        println(maintenance.toString())
     }
 }

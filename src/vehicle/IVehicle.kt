@@ -1,16 +1,19 @@
 package vehicle
 
-import java.time.LocalDate
+import java.util.UUID
 
 interface IVehicle {
-    val id: String
-    val model: String
-    val capacity: Double
+    val id: UUID
+    val name: String
+    val numberplate: String
+    var state: VehicleState
+    val maxLoadInKilo: Int
+    val mileageInKilometers: Double
     val fuelType: FuelType
-    var status: VehicleStatus
-    var currentFuelLevel: Double
-    var lastMaintenanceDate: LocalDate
+    val maintenanceScheduleInKilometers: Double
+    val assignedDriverId: UUID?
 
-    fun needsMaintenance(): Boolean
-    fun isAvailableForDelivery(): Boolean
+    fun checkIfNextMaintenanceIsRequired(): Boolean
+
+    fun displayMaintenanceInformation()
 }
